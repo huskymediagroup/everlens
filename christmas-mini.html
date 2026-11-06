@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EverLens NYC | 2026 Christmas Studio Mini-Sessions</title>
+    <meta name="description" content="Limited-edition Christmas Studio Mini-Sessions by EverLens NYC. Book your 30-minute or 1-hour holiday portrait session today.">
+    <link rel="canonical" href="https://everlens.nyc/holiday">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#4A4A4A',
+                            darker: '#3b3e40',
+                            blue: '#2a6a96',
+                            blue_light: '#3e8ebd',
+                            white: '#ffffff',
+                            offwhite: '#f7f9fa'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(59, 62, 64, 0.92) 0%, rgba(59, 62, 64, 0.62) 100%);
+        }
+
+        .pricing-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 5px solid #4A4A4A;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #2a6a96;
+        }
+
+        .pricing-card.featured {
+            border-top: 5px solid #2F7396;
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(47, 115, 150, 0.15);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.02) translateY(-5px);
+        }
+
+        .popular-badge {
+            background-color: #2F7396;
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 5px 15px;
+            border-radius: 20px;
+            align-self: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .package-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            color: #2F7396;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .package-subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .package-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+            flex-grow: 1;
+        }
+
+        .package-features li {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+            line-height: 1.4;
+        }
+
+        .package-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #2F7396;
+            font-weight: bold;
+        }
+
+        .btn-book {
+            display: inline-block;
+            text-align: center;
+            padding: 15px 25px;
+            background-color: #4A4A4A;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+            width: 100%;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .pricing-card.featured .btn-book {
+            background-color: #2F7396;
+        }
+
+        .btn-book:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .pricing-card.featured .btn-book:hover {
+            background-color: #235a77;
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-darker bg-brand-offwhite antialiased">
+
+    <!-- Header Navigation -->
+    <header class="fixed w-full top-0 z-40 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="/" class="block" title="EverLens NYC">
+                        <div class="flex items-center gap-3 select-none">
+                            <svg class="w-11 h-11 flex-shrink-0" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="32" cy="32" r="29" stroke="#4A4A4A" stroke-width="2.5"/>
+                                <polygon points="32,5 46,11 40,22" fill="#2a6a96" opacity="0.9"/>
+                                <polygon points="55,18 59,33 46,30" fill="#4A4A4A" opacity="0.85"/>
+                                <polygon points="54,47 41,57 42,43" fill="#2a6a96" opacity="0.9"/>
+                                <polygon points="32,59 18,53 24,42" fill="#4A4A4A" opacity="0.85"/>
+                                <polygon points="9,46 5,31 18,34" fill="#2a6a96" opacity="0.9"/>
+                                <polygon points="10,17 23,7 22,21" fill="#4A4A4A" opacity="0.85"/>
+                                <circle cx="32" cy="32" r="17" fill="#3b3e40"/>
+                                <polygon points="21,15 26,25 19,27" fill="#ffffff"/>
+                                <polygon points="43,15 38,25 45,27" fill="#ffffff"/>
+                                <polygon points="32,20 22,31 26,43 32,47 38,43 42,31" fill="#ffffff"/>
+                                <polygon points="32,23 28,32 32,37 36,32" fill="#2a6a96"/>
+                                <polygon points="25,33 29,34 27,36" fill="#3b3e40"/>
+                                <polygon points="39,33 35,34 37,36" fill="#3b3e40"/>
+                                <polygon points="30,41 34,41 32,44" fill="#3b3e40"/>
+                            </svg>
+                            <div class="flex flex-col leading-none">
+                                <div class="flex items-baseline">
+                                    <span class="font-serif font-bold text-xl tracking-wider" style="color: #3b3e40;">EVER</span>
+                                    <span class="font-serif font-bold text-xl tracking-wider" style="color: #2a6a96;">LENS</span>
+                                </div>
+                                <span class="font-sans font-bold text-[9.5px] tracking-[0.22em] uppercase mt-0.5" style="color: #2a6a96;">STUDIO SESSIONS</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-brand-dark font-medium hover:text-brand-blue transition duration-300 text-sm tracking-wide">The Studio</a>
+                    <a href="#packages" class="text-brand-dark font-medium hover:text-brand-blue transition duration-300 text-sm tracking-wide">Packages</a>
+                    <button type="button" onclick="openBookingModal()" class="bg-brand-blue text-white hover:bg-brand-blue_light px-6 py-2.5 rounded-md font-semibold transition duration-300 text-sm flex items-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-calendar-check"></i> Book Now
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-28 pb-16">
+            <div class="absolute inset-0 z-0 bg-gray-900">
+                <!-- Replace with your Christmas Studio Sample Image -->
+                <img src="images/christmas-studio-hero.webp" alt="EverLens NYC Christmas Studio Setup" class="w-full h-full object-cover opacity-60">
+            </div>
+            <div class="absolute inset-0 hero-overlay z-10"></div>
+
+            <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+                <span class="text-brand-blue_light font-bold tracking-widest uppercase text-sm mb-4 block">Limited Edition Event</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
+                    2026 Christmas <br/><span class="text-brand-blue_light italic">Studio Sessions</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl font-light">
+                    Skip the last-minute holiday card panic. Step into our fully decorated winter wonderland for a premium portrait experience perfect for families, couples, and pets.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button type="button" onclick="openBookingModal()" class="bg-brand-blue hover:bg-brand-blue_light text-white px-8 py-4 rounded-md font-bold transition duration-300 text-lg flex items-center justify-center gap-2 shadow-lg">
+                        View Dates & Book <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing / Packages Section -->
+        <section id="packages" class="py-24 bg-brand-white border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-serif font-bold text-brand-darker mb-4">Choose Your Session</h2>
+                    <p class="text-gray-600 text-lg">Guaranteed delivery in time for Christmas mailers.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Package 1: 30 Minutes -->
+                    <div class="pricing-card">
+                        <span class="popular-badge !bg-brand-dark">The Classic</span>
+                        <h3 class="package-title">30-Minute Holiday Session</h3>
+                        <div class="package-price">$325</div>
+                        <div class="package-subtitle">Perfect for standard family photos, couples, or a single pet.</div>
+                        <ul class="package-features">
+                            <li>30 Minutes of exclusive studio time</li>
+                            <li>10-15 Professionally edited high-resolution digital images</li>
+                            <li>One outfit (no wardrobe changes to maximize shooting time)</li>
+                            <li>Private online viewing and download gallery</li>
+                            <li>Full print release included</li>
+                        </ul>
+                        <button type="button" onclick="openBookingModal()" class="btn-book">Select The Classic</button>
+                    </div>
+
+                    <!-- Package 2: 60 Minutes -->
+                    <div class="pricing-card featured">
+                        <span class="popular-badge">The Premium</span>
+                        <h3 class="package-title">1-Hour Holiday Experience</h3>
+                        <div class="package-price">$575</div>
+                        <div class="package-subtitle">Ideal for outfit changes, large families, or energetic pets.</div>
+                        <ul class="package-features">
+                            <li>60 Minutes of exclusive, relaxed studio time</li>
+                            <li>35+ Professionally edited high-resolution digital images</li>
+                            <li>Time permitted for one outfit change (e.g., formal to matching pajamas)</li>
+                            <li>Extra time to acclimate anxious or excited pets to the studio flashes</li>
+                            <li>Private online viewing and download gallery</li>
+                            <li>Full print release included</li>
+                        </ul>
+                        <button type="button" onclick="openBookingModal()" class="btn-book">Select The Premium</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer mirroring source design -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 border-t-[6px] border-brand-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2026 EverLens NYC (everlens.nyc) • A Husky Media Group Company.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal (Using Provided Dubsado Embed) -->
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto transition-opacity" onclick="if(event.target === this) closeBookingModal()">
+        <div class="bg-brand-offwhite rounded-2xl max-w-3xl w-full shadow-2xl border-t-[6px] border-brand-blue my-8 relative flex flex-col max-h-[90vh] overflow-hidden">
+            <div class="flex justify-between items-center px-6 py-5 bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-blue block mb-1"><i class="fa-solid fa-lock mr-1"></i> Secure Booking</span>
+                    <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-darker">Reserve Your Time Slot</h3>
+                </div>
+                <button type="button" onclick="closeBookingModal()" class="w-10 h-10 bg-gray-50 border border-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:text-white hover:bg-brand-darker transition-all">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="p-0 sm:p-8 overflow-y-auto w-full">
+                <div class="bg-white sm:rounded-xl sm:shadow-sm sm:border border-gray-200 overflow-hidden w-full">
+                    <!-- User Provided Embed Code -->
+                    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.14/iframeResizer.min.js"></script>
+                    <iframe src="https://portal.huskymediagroup.com/public/form/view/6aee0c7982eb9a2dbbb879c1?iframe=true" frameBorder="0" width="100%" height="750"></iframe>
+                    <script type="text/javascript">setTimeout(function(){iFrameResize({checkOrigin: false});},30);</script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openBookingModal() {
+            const modal = document.getElementById('booking-modal');
+            if (modal) modal.classList.remove('hidden');
+        }
+        function closeBookingModal() {
+            const modal = document.getElementById('booking-modal');
+            if (modal) modal.classList.add('hidden');
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') closeBookingModal();
+        });
+    </script>
+</body>
+</html>
